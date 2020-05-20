@@ -1,5 +1,5 @@
 # Vehicle Collisions
 
-<img src="image.png" width="1000" height="300">
+<img src="City_info.png" width="1000" height="300">
 
-<img src="image2.png" width="1000" height="300">
+<img src="weather_info.png" width="1000" height="300">
