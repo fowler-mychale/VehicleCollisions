@@ -18,8 +18,11 @@ df[['End_Date', 'End(time)']] = df['End_Time'].str.split(' ', n=1, expand=True)
 
 df['End_Date'] = pd.to_datetime(df['End_Time'])
 
+#the difference in response time
 df['Difference'] = (df['End_Date'] - df['Start_Date']).astype(str).str[-15:-13]
 
+
+#Convert columns to datetime
 df['Start_year'] = df['Start_Date'].dt.year
 df['Start_month'] = df['Start_Date'].dt.month
 df['Start_day'] = df['Start_Date'].dt.day
@@ -33,7 +36,7 @@ df.drop(df[(df['City'] != 'Los Angeles') & (df['City'] != 'Boston') & (df['City'
 #drop more unused columns
 df.drop(['Start_Time','End_Time','Start_Date','End_Date'], axis=1,inplace=True)
 
-#City Graph
+#City Graph 
 fig1, ax = plt.subplots(ncols=3,figsize=(15,4))
 sns.barplot(x='City',y='Severity', data=df,ax=ax[0],hue='Astronomical_Twilight')
 sns.barplot(x='City',y='Severity', data=df, ax=ax[1],hue='Civil_Twilight')
