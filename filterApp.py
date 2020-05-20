@@ -4,7 +4,6 @@ import time
 import datetime
 import seaborn as sns
 import matplotlib.pyplot as plt
-import PySimpleGUI as sg
 
 
 df = pd.read_csv('/Users/Mike_F/Desktop/US_Accidents_Dec19.csv')
