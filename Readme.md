@@ -21,7 +21,9 @@
   ``` Python
   df['Difference'] = (df['End_Date'] - df['Start_Date'])
   ```
-   - The 'Side' column is categorical and will need to be represented as a number, so we can use them for our purposes.</br>
+   
+  The 'Side' column is categorical and will need to be represented as a number, so we can use them for our purposes.</br>
+  
   ``` Python      
   df['Side'].replace('L',1, inplace=True)
   df['Side'].replace('R',0, inplace=True)
