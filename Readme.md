@@ -22,7 +22,7 @@
   df['Difference'] = (df['End_Date'] - df['Start_Date'])
   ```
    
-  The 'Side' column is categorical and will need to be represented as a number, so we can use them for our purposes.</br>
+   The 'Side' column is categorical and will need to be represented as a number, so we can use them for our purposes.</br>
   
   ``` Python      
   df['Side'].replace('L',1, inplace=True)
@@ -31,10 +31,25 @@
   <img src="Side.png" width="1000" height="275"></br>
 
 **1. Looking at the amount of accidents per city by twilight (Night/Day).**
+```Python
+fig1, ax = plt.subplots(ncols=3,figsize=(15,4))
+sns.barplot(x='City',y='Severity', data=df,ax=ax[0],hue='Astronomical_Twilight').set_title("Graph (Astronomical_Twilight)")
+sns.barplot(x='City',y='Severity', data=df, ax=ax[1],hue='Civil_Twilight').set_title("Graph (Civil_Twilight)")
+sns.barplot(x='City',y='Severity', data=df,ax=ax[2],hue='Nautical_Twilight').set_title("Graph (Nautical_Twilight)")
+```
 
 <img src="City_info.png" width="1000" height="275">
+```Python
+fig3, ax = plt.subplots(ncols=3,figsize=(15,4))
+sns.barplot(x='City',y='Difference', data=df,ax=ax[0],hue='Astronomical_Twilight').set_title('Time_Diff (Astronomical_Twilight)')
+sns.barplot(x='City',y='Difference', data=df, ax=ax[1],hue='Civil_Twilight').set_title("Time_Diff (Civil_Twilight)")
+sns.barplot(x='City',y='Difference', data=df,ax=ax[2],hue='Nautical_Twilight').set_title("Time_Diff (Nautical_Twilight)")
+```
+
 
 <img src="Time_Difference.png" width="1000" height="275">
+
+
 
 <img src="weather_info.png" width="1000" height="275">
 
