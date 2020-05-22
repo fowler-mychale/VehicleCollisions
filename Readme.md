@@ -17,9 +17,11 @@
   - **Nautical_Twilight:** Defined as the time when the horizon and the brighter stars are usually visible at this time, making it possible to navigate at sea.
   - **Astronimical_Twilight:** Defined as the time when the geometric center of the Sun is at 18 degrees below the horizon. Before this time, the sky is absolutely dark.</br></br>
  - **What other insights can we gather from the selected tables?**</br></br>
-   - We can extrapolate the time difference from subtracting the Start_Time and End_Time columns and determine who had the longest time to clear a collision.
-   
-   - The 'Side' column is categorical and will need to be represented as a number, so we can use them for our purposes.</br></br>
+   - We can extrapolate the time difference from subtracting the Start_Time and End_Time columns and determine who had the longest time to clear a collision.</br>
+   ``` Python
+   df['Difference'] = (df['End_Date'] - df['Start_Date'])
+   ```
+   - The 'Side' column is categorical and will need to be represented as a number, so we can use them for our purposes.</br>
   ``` Python      
   df['Side'].replace('L',1, inplace=True)
   df['Side'].replace('R',0, inplace=True)
