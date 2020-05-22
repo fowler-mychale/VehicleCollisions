@@ -20,8 +20,10 @@
    - We can extrapolate the time difference from subtracting the Start_Time and End_Time columns and determine who had the longest time to clear a collision.
    
    - The 'Side' column is categorical and will need to be represented as a number, so we can use them for our purposes.</br></br>
-      
-   
+  ``` Python      
+  df['Side'].replace('L',1, inplace=True)
+  df['Side'].replace('R',0, inplace=True)
+  ```   
 **1. Looking at the amount of accidents per city by twilight (Night/Day).**
 <img src="City_info.png" width="1000" height="275">
 
