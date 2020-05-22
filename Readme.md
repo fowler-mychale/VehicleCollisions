@@ -24,6 +24,8 @@
   df['Side'].replace('L',1, inplace=True)
   df['Side'].replace('R',0, inplace=True)
   ```   
+  </br>
+  <img src="Side.png" width="1000" height="275">
 **1. Looking at the amount of accidents per city by twilight (Night/Day).**
 <img src="City_info.png" width="1000" height="275">
 
