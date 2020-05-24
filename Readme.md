@@ -51,7 +51,24 @@ sns.barplot(x='City',y='Difference', data=df,ax=ax[2],hue='Nautical_Twilight').s
 <img src="Time_Difference.png" width="1000" height="275">
 
 
+```Python
+#Weather graph
+fig2, axs = plt.subplots(ncols=3,figsize=(15,4))
+sns.lineplot(x='Start_month', y='Temperature(F)', data=df, ax=axs[0],hue='City',ci=None).set_title("Graph (Temperature(F))")
+sns.lineplot(x='Start_month', y='Humidity(%)', data=df, ax=axs[1],hue='City',ci=None).set_title("Graph (Humidity(%))")
+sns.lineplot(x='Start_month', y='Pressure(in)', data=df, ax=axs[2],hue='City',ci=None).set_title("Graph (Pressure(in))")
+```
+
+
 <img src="weather_info.png" width="1000" height="275">
+
+```Python
+fig2, axs = plt.subplots(ncols=3,figsize=(15,4))
+sns.lineplot(x='Difference', y='Temperature(F)', data=df, ax=axs[0],hue='City',ci=None).set_title("Time_Diff (Temperature(F))")
+sns.lineplot(x='Difference', y='Humidity(%)', data=df, ax=axs[1],hue='City',ci=None).set_title("Time_Diff (Humidity(%))")
+sns.lineplot(x='Difference', y='Pressure(in)', data=df, ax=axs[2],hue='City',ci=None).set_title("Time_DIff (Pressure(in))")
+```
+
 
 <img src="Time_Difference (by climate).png" width="1000" height="275">
 
