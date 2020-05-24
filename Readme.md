@@ -30,7 +30,7 @@
   ```   
   <img src="Side.png" width="1000" height="275"></br>
 
-**1. Looking at the amount of accidents per city by twilight (Night/Day).**
+**1. Looking at the severity of accidents per city and twilight (Night/Day).**
 ```Python
 fig1, ax = plt.subplots(ncols=3,figsize=(15,4))
 sns.barplot(x='City',y='Severity', data=df,ax=ax[0],hue='Astronomical_Twilight').set_title("Graph (Astronomical_Twilight)")
@@ -38,8 +38,8 @@ sns.barplot(x='City',y='Severity', data=df, ax=ax[1],hue='Civil_Twilight').set_t
 sns.barplot(x='City',y='Severity', data=df,ax=ax[2],hue='Nautical_Twilight').set_title("Graph (Nautical_Twilight)")
 ```
 
-<img src="City_info.png" width="1000" height="275">
-
+<img src="City_info.png" width="1000" height="275"></br>
+**2. Looking at the time difference of accidents per city and twilight (Night/Day).**
 ```Python
 fig3, ax = plt.subplots(ncols=3,figsize=(15,4))
 sns.barplot(x='City',y='Difference', data=df,ax=ax[0],hue='Astronomical_Twilight').set_title('Time_Diff (Astronomical_Twilight)')
@@ -48,9 +48,9 @@ sns.barplot(x='City',y='Difference', data=df,ax=ax[2],hue='Nautical_Twilight').s
 ```
 
 
-<img src="Time_Difference.png" width="1000" height="275">
+<img src="Time_Difference.png" width="1000" height="275"></br>
 
-
+**3. Looking at the amount of accident resolution per month, and temperature grouped by city.**
 ```Python
 #Weather graph
 fig2, axs = plt.subplots(ncols=3,figsize=(15,4))
@@ -60,8 +60,8 @@ sns.lineplot(x='Start_month', y='Pressure(in)', data=df, ax=axs[2],hue='City',ci
 ```
 
 
-<img src="weather_info.png" width="1000" height="275">
-
+<img src="weather_info.png" width="1000" height="275"></br>
+**4. Looking at the time difference of accident resolution per temperature and grouped by city.**
 ```Python
 fig2, axs = plt.subplots(ncols=3,figsize=(15,4))
 sns.lineplot(x='Difference', y='Temperature(F)', data=df, ax=axs[0],hue='City',ci=None).set_title("Time_Diff (Temperature(F))")
