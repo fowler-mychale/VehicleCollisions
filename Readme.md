@@ -30,7 +30,7 @@
   ```   
   <img src="Side.png" width="1000" height="275"></br>
   
-  - What we can determine from the information provided is more traffic collions occur in those locatoins
+  - What we can determine from the information provided is more traffic collions occur on the right side of the traffic (slow lane) as opposed to the left side of the street (fast/lane).
 
 **1. Looking at the severity of accidents per city and twilight (Night/Day).**
 ```Python
