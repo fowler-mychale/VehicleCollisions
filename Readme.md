@@ -29,6 +29,8 @@
   df['Side'].replace('R',0, inplace=True)
   ```   
   <img src="Side.png" width="1000" height="275"></br>
+  
+  - What we can determine from the information provided is more traffic collions occur in those locatoins
 
 **1. Looking at the severity of accidents per city and twilight (Night/Day).**
 ```Python
