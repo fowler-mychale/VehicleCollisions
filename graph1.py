@@ -14,7 +14,7 @@ fig4, a = plt.subplots(ncols=1,figsize=(15,4))
 sns.lineplot(x='City',y='Difference',hue='Side', ci=None, data=df).set_title("Graph (Collisions Side and City)")
 
 fig5, a = plt.subplots(ncols=1,figsize=(15,4))
-sns.lineplot(x='Difference',y='Distance(mi)',hue='Side', ci=None, data=df).set_title("Graph (Collisions Side and City)")
+sns.lineplot(x='Difference',y='Distance(mi)',hue='Side', ci=None, data=df).set_title("Graph (Time difference by distance)")
 
 fig3, ax = plt.subplots(ncols=3,figsize=(15,4))
 sns.barplot(x='City',y='Difference', data=df,ax=ax[0],hue='Astronomical_Twilight').set_title('Time_Diff (Astronomical_Twilight)')
