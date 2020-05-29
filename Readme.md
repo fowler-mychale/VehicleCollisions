@@ -30,7 +30,9 @@
   ```   
   <img src="Side.png" width="1000" height="275"></br>
   
-  - What we can determine from the information provided is more traffic collisions occur on the right side (slow lane) as opposed to the left side of the street (fast/lane) in either direction of direction of traffic. Also, we can determine that overall, it takes longer for accidents to clear up on the right side than the left. Lets also look at the length of the road extent affected by the accidents and how long it took clear up.
+  - What we can determine from the information provided is more traffic collisions occur on the right side (slow lane) as opposed to the left side of the street (fast/lane) in either direction of direction of traffic. Also, we can determine that overall, it takes longer for accidents to clear up on the right side than the left. Lets also look at the length of the road extent affected by the accidents and how long it took clear up.</br>
+  
+   <img src="Distance.png" width="1000" height="275"></br>
   
   
 
