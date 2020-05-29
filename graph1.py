@@ -38,7 +38,7 @@ plt.close(fig3)
 fig4.savefig('Side')
 plt.close(fig4)
 
-fig5.savefig('Time_Difference (by climate)')
+fig5.savefig('Distance')
 plt.close(fig5)
 
 plt.show()
