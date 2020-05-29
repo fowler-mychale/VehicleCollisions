@@ -17,17 +17,60 @@
   - **Nautical_Twilight:** Defined as the time when the horizon and the brighter stars are usually visible at this time, making it possible to navigate at sea.
   - **Astronimical_Twilight:** Defined as the time when the geometric center of the Sun is at 18 degrees below the horizon. Before this time, the sky is absolutely dark.</br></br>
  - **What other insights can we gather from the selected tables?**</br></br>
-   - We can extrapolate the time difference from subtracting the Start_Time and End_Time columns and determine who had the longest time to clear a collision.
+   - We can extrapolate the time difference from subtracting the Start_Time and End_Time columns and determine who had the longest time to clear a collision.</br></br>
+  ``` Python
+  df['Difference'] = (df['End_Date'] - df['Start_Date'])
+  ```
    
-   - The 'Side' column is categorical and will need to be represented as a number, so we can use them for our purposes.</br></br>
-      
-   
-**1. Looking at the amount of accidents per city by twilight (Night/Day).**
-<img src="City_info.png" width="1000" height="275">
+   The 'Side' column is categorical and will need to be represented as a number, so we can use them for our purposes.</br>
+  
+  ```Python      
+  df['Side'].replace('L',1, inplace=True)
+  df['Side'].replace('R',0, inplace=True)
+  ```   
+  <img src="Side.png" width="1000" height="275"></br>
+  
+  - What we can determine from the information provided is more traffic collions occur on the right side of the traffic (slow lane) as opposed to the left side of the street (fast/lane) in either direction.
 
-<img src="Time_Difference.png" width="1000" height="275">
+**1. Looking at the severity of accidents per city and twilight (Night/Day).**
+```Python
+fig1, ax = plt.subplots(ncols=3,figsize=(15,4))
+sns.barplot(x='City',y='Severity', data=df,ax=ax[0],hue='Astronomical_Twilight').set_title("Graph (Astronomical_Twilight)")
+sns.barplot(x='City',y='Severity', data=df, ax=ax[1],hue='Civil_Twilight').set_title("Graph (Civil_Twilight)")
+sns.barplot(x='City',y='Severity', data=df,ax=ax[2],hue='Nautical_Twilight').set_title("Graph (Nautical_Twilight)")
+```
 
-<img src="weather_info.png" width="1000" height="275">
+<img src="City_info.png" width="1000" height="275"></br>
+**2. Looking at the time difference of accidents per city and twilight (Night/Day).**
+```Python
+fig3, ax = plt.subplots(ncols=3,figsize=(15,4))
+sns.barplot(x='City',y='Difference', data=df,ax=ax[0],hue='Astronomical_Twilight').set_title('Time_Diff (Astronomical_Twilight)')
+sns.barplot(x='City',y='Difference', data=df, ax=ax[1],hue='Civil_Twilight').set_title("Time_Diff (Civil_Twilight)")
+sns.barplot(x='City',y='Difference', data=df,ax=ax[2],hue='Nautical_Twilight').set_title("Time_Diff (Nautical_Twilight)")
+```
+
+
+<img src="Time_Difference.png" width="1000" height="275"></br>
+
+**3. Looking at the amount of accident resolution per month, and temperature grouped by city.**
+```Python
+#Weather graph
+fig2, axs = plt.subplots(ncols=3,figsize=(15,4))
+sns.lineplot(x='Start_month', y='Temperature(F)', data=df, ax=axs[0],hue='City',ci=None).set_title("Graph (Temperature(F))")
+sns.lineplot(x='Start_month', y='Humidity(%)', data=df, ax=axs[1],hue='City',ci=None).set_title("Graph (Humidity(%))")
+sns.lineplot(x='Start_month', y='Pressure(in)', data=df, ax=axs[2],hue='City',ci=None).set_title("Graph (Pressure(in))")
+```
+
+
+<img src="weather_info.png" width="1000" height="275"></br>
+**4. Looking at the time difference of accident resolution per temperature and grouped by city.**
+```Python
+fig2, axs = plt.subplots(ncols=3,figsize=(15,4))
+sns.lineplot(x='Difference', y='Temperature(F)', data=df, ax=axs[0],hue='City',ci=None).set_title("Time_Diff (Temperature(F))")
+sns.lineplot(x='Difference', y='Humidity(%)', data=df, ax=axs[1],hue='City',ci=None).set_title("Time_Diff (Humidity(%))")
+sns.lineplot(x='Difference', y='Pressure(in)', data=df, ax=axs[2],hue='City',ci=None).set_title("Time_DIff (Pressure(in))")
+```
+
 
 <img src="Time_Difference (by climate).png" width="1000" height="275">
 
