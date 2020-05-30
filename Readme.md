@@ -30,11 +30,12 @@
   ```   
   <img src="Side.png" width="1000" height="275"></br>
   
-  - What we can determine from the information provided is more traffic collisions occur on the right side (slow lane) as opposed to the left side of the street (fast/lane) in either direction of direction of traffic. In rating response times, we can observe that Chicago has the fastest clear up time on either side and Los Angeles has the slowest overall. Also, we can determine that it takes longer for accidents to clear up on the right side than the left in general. Lets also look at the length of the road  affected by the accidents and if there was a difference in how long it took to clear up.</br>
+  - What we can determine from the information provided is more traffic collisions occur on the right side (slow lane) as opposed to the left side of the street (fast/lane) in either direction of direction of traffic. In rating response times, we can observe that Chicago has the fastest clear up time on either side and Los Angeles has the slowest overall. Also, we can determine that it takes longer for accidents to clear up on the right side than the left in general. Lets also look at the length of the road affected by the accidents and if there was a difference in how long it took to clear up.</br>
   
    <img src="Distance.png" width="1000" height="275"></br>
-  
-  
+ - The story told from the data is that typically the longer the length the accidents affect on traffic is, the longer it takes to clear up. Finally lets look at hte severity </br>
+
+  <img src="Side.png" width="1000" height="275"></br>
 
 **1. Looking at the severity of accidents per city and twilight (Night/Day).**
 ```Python
