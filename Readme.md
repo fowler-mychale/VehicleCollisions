@@ -38,8 +38,6 @@
   <img src="Severity.png" width="1000" height="275"></br>
   - From this we can see that indeed the worse the collision the longer it takes to clear. We can also see that the left side does have more collisions as compared to the right.
 
-  <img src="Side.png" width="1000" height="275"></br>
-
 **1. Looking at the severity of accidents per city and twilight (Night/Day).**
 ```Python
 fig1, ax = plt.subplots(ncols=3,figsize=(15,4))
