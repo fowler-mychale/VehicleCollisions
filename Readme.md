@@ -36,7 +36,7 @@
  - The story told from the data is that typically the longer the length the accidents affect on traffic is, the longer it takes to clear up, and finally lets look at how long collision take to clear up by the severity of the collision. </br>
  
   <img src="Severity.png" width="1000" height="275"></br>
-  - From this we can see that indeed the worse the collision the longer it takes to clear. We can also that the left side does have more accidnts as compared to the right.
+  - From this we can see that indeed the worse the collision the longer it takes to clear. We can also see that the left side does have more collisions as compared to the right.
 
   <img src="Side.png" width="1000" height="275"></br>
 
