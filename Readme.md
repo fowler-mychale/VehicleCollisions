@@ -116,5 +116,5 @@ sns.lineplot(x='Difference', y='Pressure(in)', data=df, ax=axs[2],hue='City',ci=
 - VS Code
 - CMD/Powershell
 
-### Link to datset</br>
+### Link to dataset</br>
 https://www.kaggle.com/sobhanmoosavi/us-accidents
