@@ -100,6 +100,16 @@ sns.lineplot(x='Difference', y='Pressure(in)', data=df, ax=axs[2],hue='City',ci=
 <img src="Time_Difference (by climate).png" width="1000" height="275">
 </br>
 
+### Summary
+- This what we know from the information above:
+  - There are more level 2 and 3 cases with level 1 having the least.
+  -  There is more traffic collisions occur on the right side (slow lane) as opposed to the left side of the street (fast/lane) in either direction of direction of traffic.
+  - Chicago has the fastest clear up time on either side and Los Angeles has the slowest overall.
+  - Typically the longer the length the accidents affect on traffic is, the longer it takes to clear up.
+  - Collisions take longer to clear at night; with Los Angles taking the longest followed by Boston, New york and finally Chicago.
+  - From the end of May to the end of August is when the most collsions occur.
+  - New York at its hottest takes the longest to clear a traffic accident
+
 ### Tools used for this project
 - Python 3.8.2
 - MS EXCEL
