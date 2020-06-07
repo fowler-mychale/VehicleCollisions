@@ -54,7 +54,7 @@ sns.barplot(x='City',y='Difference', data=df,ax=ax[2],hue='Nautical_Twilight').s
 
 **2. Collisions per month, temperature and grouped by city.**
 - From the information provided we can determine that:</br>
-  - From the data provided we can determine that from the end of May to the end of August is when the most collsions occur. This fact likely due to the season and more people on the road.
+  - From the end of May to the end of August is when the most collsions occur. This fact likely due to the season and more people on the road.
 
 
 ```Python
