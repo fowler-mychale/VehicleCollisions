@@ -27,7 +27,7 @@ print((df[['Difference', 'Severity']].groupby(['Severity']).describe()))
 | 2             |  52917.0      | 26.071338   |   17.720273   |   0.0   |  6.0      |29.0                |     44.0 |     59.0   |
 | 3             |36346.0        | 29.519617   | 15.690686     |   0.0   | 29.0      |29.0                |    44.0  |     59.0   |
 | 4             | 1421.0        | 14.648839   |  16.899533    |   0.0   | 0.0       |0.0                 |    29.0  |     59.0   | 
-</br></br>  
+</br>
  - **What other insights can we gather from the selected tables?**</br></br>
    - We can extrapolate the time difference from subtracting the Start_Time and End_Time columns and determine who had the longest time to clear a collision.</br></br>
   ``` Python
