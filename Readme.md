@@ -53,12 +53,6 @@ sns.barplot(x='City',y='Difference', data=df,ax=ax[2],hue='Nautical_Twilight').s
 - From the information provided we can determine that overall, collisions take longer to clear at night; with Los Angles taking the longest followed by Boston, New york and finally Chicago. It can also be determined that overall during civil twilight the most collisions occur.
 
 **2. Collisions per month, temperature and grouped by city.**
-- From the information provided we can determine that:</br>
-  - From the end of May to the end of August is when the most collsions occur. This fact likely due to the season and more people on the road.
-  - Upon observing collisions during periods of high humidity we can determine that Chicago peaked during the month of September and was at its lowest in New York in the month of March.
-  - Upon observing collisions during periods of high and low air pressure, we can see that during the month of May in Chicago there was the least amount of collisions. Which makes since due to warm weather being favorable to tire pressure. During the month of October we can see the highest activity.
-
-
 ```Python
 #Weather graph
 fig2, axs = plt.subplots(ncols=3,figsize=(15,4))
@@ -66,6 +60,13 @@ sns.lineplot(x='Start_month', y='Temperature(F)', data=df, ax=axs[0],hue='City',
 sns.lineplot(x='Start_month', y='Humidity(%)', data=df, ax=axs[1],hue='City',ci=None).set_title("Graph (Humidity(%))")
 sns.lineplot(x='Start_month', y='Pressure(in)', data=df, ax=axs[2],hue='City',ci=None).set_title("Graph (Pressure(in))")
 ```
+- From the information provided we can determine that:</br>
+  - From the end of May to the end of August is when the most collsions occur. This fact likely due to the season and more people on the road.
+  - Upon observing collisions during periods of high humidity we can determine that Chicago peaked during the month of September and was at its lowest in New York in the month of March.
+  - Upon observing collisions during periods of high and low air pressure, we can see that during the month of May in Chicago there was the least amount of collisions. Which makes since due to warm weather being favorable to tire pressure. During the month of October we can see the highest activity.
+
+
+
 
 
 <img src="weather_info.png" width="1000" height="275"></br>
