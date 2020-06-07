@@ -56,7 +56,7 @@ sns.barplot(x='City',y='Difference', data=df,ax=ax[2],hue='Nautical_Twilight').s
 - From the information provided we can determine that:</br>
   - From the end of May to the end of August is when the most collsions occur. This fact likely due to the season and more people on the road.
   - Upon observing collisions during periods of high humidity we can determine that Chicago peaked during the month of September and was at its lowest in New York in the month of March.
-  - 
+  - Upon observing collisions during periods of high and low air pressure, we can see that during the month of May in Chicago there was the least amount of collisions. Whxi h makes since due to warm weather being favorable to tire pressure. During the month of October
 
 
 ```Python
