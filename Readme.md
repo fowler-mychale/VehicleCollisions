@@ -39,10 +39,6 @@
   - From this we can see that indeed the worse the collision the longer it takes to clear. We can also see that the left side does have more collisions as compared to the right.
 
 **1. Looking at the time difference of accidents per city and twilight (Night/Day).**
-- Below is a visual representation of twilight for context.</br></br>
-<img src="Twilight-1.png" width="1000" height="275"></br>
-
-
 ```Python
 fig3, ax = plt.subplots(ncols=3,figsize=(15,4))
 sns.barplot(x='City',y='Difference', data=df,ax=ax[0],hue='Astronomical_Twilight').set_title('Time_Diff (Astronomical_Twilight)')
@@ -50,8 +46,11 @@ sns.barplot(x='City',y='Difference', data=df, ax=ax[1],hue='Civil_Twilight').set
 sns.barplot(x='City',y='Difference', data=df,ax=ax[2],hue='Nautical_Twilight').set_title("Time_Diff (Nautical_Twilight)")
 ```
 
+- Below is a visual representation of twilight for context.</br></br>
+<img src="Twilight-1.png" width="1000" height="275"></br>
 
 <img src="Time_Difference.png" width="1000" height="275"></br>
+- From the information provided we can determine that naturally, overall, collisions take longer to clear at night. Los angles being the taking the longest
 
 **2. Looking at the amount of accident resolution per month, and temperature grouped by city.**
 ```Python
