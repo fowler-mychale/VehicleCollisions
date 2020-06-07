@@ -38,12 +38,11 @@
   <img src="Severity.png" width="1000" height="275"></br>
   - From this we can see that indeed the worse the collision the longer it takes to clear. We can also see that the left side does have more collisions as compared to the right.
 
-**1. Looking at the severity of accidents per city and twilight (Night/Day).**</br>
+**1. Looking at the time difference of accidents per city and twilight (Night/Day).**
 - Below is a visual representation of twilight for context.</br></br>
 <img src="Twilight-1.png" width="1000" height="275"></br>
 
 
-**2. Looking at the time difference of accidents per city and twilight (Night/Day).**
 ```Python
 fig3, ax = plt.subplots(ncols=3,figsize=(15,4))
 sns.barplot(x='City',y='Difference', data=df,ax=ax[0],hue='Astronomical_Twilight').set_title('Time_Diff (Astronomical_Twilight)')
