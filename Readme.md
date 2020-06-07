@@ -53,7 +53,7 @@ sns.barplot(x='City',y='Difference', data=df,ax=ax[2],hue='Nautical_Twilight').s
 
 <img src="Time_Difference.png" width="1000" height="275"></br>
 
-**3. Looking at the amount of accident resolution per month, and temperature grouped by city.**
+**2. Looking at the amount of accident resolution per month, and temperature grouped by city.**
 ```Python
 #Weather graph
 fig2, axs = plt.subplots(ncols=3,figsize=(15,4))
@@ -64,7 +64,7 @@ sns.lineplot(x='Start_month', y='Pressure(in)', data=df, ax=axs[2],hue='City',ci
 
 
 <img src="weather_info.png" width="1000" height="275"></br>
-**4. Looking at the time difference of accident resolution per temperature and grouped by city.**
+**3. Looking at the time difference of accident resolution per temperature and grouped by city.**
 ```Python
 fig2, axs = plt.subplots(ncols=3,figsize=(15,4))
 sns.lineplot(x='Difference', y='Temperature(F)', data=df, ax=axs[0],hue='City',ci=None).set_title("Time_Diff (Temperature(F))")
