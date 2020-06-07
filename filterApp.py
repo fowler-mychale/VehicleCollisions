@@ -39,21 +39,12 @@ df.drop(df[(df['City'] != 'Los Angeles') & (df['City'] != 'Boston') & (df['City'
 df.drop(['Start_Time','End_Time','Start_Date','End_Date'], axis=1,inplace=True)
 
 
-
-# City Graph 
-fig1, ax = plt.subplots(ncols=3,figsize=(15,4))
-sns.barplot(x='City',y='Severity', data=df,ax=ax[0],hue='Astronomical_Twilight').set_title("Graph (Astronomical_Twilight) ")
-sns.barplot(x='City',y='Severity', data=df, ax=ax[1],hue='Nautical_Twilight').set_title("Graph (Nautical_Twilight)")
-sns.barplot(x='City',y='Severity', data=df,ax=ax[2],hue='Civil_Twilight').set_title("Graph (Civil_Twilight)")
-
 #Weather graph
 fig2, axs = plt.subplots(ncols=3,figsize=(15,4))
 sns.lineplot(x='Start_month', y='Temperature(F)', data=df, ax=axs[0],hue='City',ci=None).set_title("Graph (Temperature(F))")
 sns.lineplot(x='Start_month', y='Humidity(%)', data=df, ax=axs[1],hue='City',ci=None).set_title("Graph (Humidity(%))")
 sns.lineplot(x='Start_month', y='Pressure(in)', data=df, ax=axs[2],hue='City',ci=None).set_title("Graph (Pressure(in))")
 
-fig1.savefig('City_info', dpi=200)
-plt.close(fig1)
 
 fig2.savefig('weather_info', dpi=200)
 plt.close(fig2)
