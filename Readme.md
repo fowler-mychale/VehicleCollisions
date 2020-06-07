@@ -52,7 +52,11 @@ sns.barplot(x='City',y='Difference', data=df,ax=ax[2],hue='Nautical_Twilight').s
 <img src="Time_Difference.png" width="1000" height="275"></br>
 - From the information provided we can determine that overall, collisions take longer to clear at night; with Los Angles taking the longest followed by Boston, New york and finally Chicago. It can also be determined that overall during civil twilight the most collisions occur.
 
-**2. Looking at the amount of accident resolution per month, and temperature grouped by city.**
+**2. Collisions per month, temperature and grouped by city.**
+- From thei nformation provided we can determine that:</br>
+ - lornipsum
+
+
 ```Python
 #Weather graph
 fig2, axs = plt.subplots(ncols=3,figsize=(15,4))
