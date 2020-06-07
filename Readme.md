@@ -38,21 +38,7 @@
   <img src="Severity.png" width="1000" height="275"></br>
   - From this we can see that indeed the worse the collision the longer it takes to clear. We can also see that the left side does have more collisions as compared to the right.
 
-**1. Looking at the severity of accidents per city and twilight (Night/Day).**</br>
-- Below is a visual representation of twilight for context.</br></br>
-<img src="Twilight-1.png" width="1000" height="275"></br>
-- 
-```Python
-fig1, ax = plt.subplots(ncols=3,figsize=(15,4))
-sns.barplot(x='City',y='Severity', data=df,ax=ax[0],hue='Astronomical_Twilight').set_title("Graph (Astronomical_Twilight)")
-sns.barplot(x='City',y='Severity', data=df, ax=ax[1],hue='Civil_Twilight').set_title("Graph (Civil_Twilight)")
-sns.barplot(x='City',y='Severity', data=df,ax=ax[2],hue='Nautical_Twilight').set_title("Graph (Nautical_Twilight)")
-```
-<img src="City_info.png" width="1000" height="275"></br>
-
-
-
-**2. Looking at the time difference of accidents per city and twilight (Night/Day).**
+**1. Looking at the time difference of accidents per city and twilight (Night/Day).**
 ```Python
 fig3, ax = plt.subplots(ncols=3,figsize=(15,4))
 sns.barplot(x='City',y='Difference', data=df,ax=ax[0],hue='Astronomical_Twilight').set_title('Time_Diff (Astronomical_Twilight)')
@@ -60,10 +46,13 @@ sns.barplot(x='City',y='Difference', data=df, ax=ax[1],hue='Civil_Twilight').set
 sns.barplot(x='City',y='Difference', data=df,ax=ax[2],hue='Nautical_Twilight').set_title("Time_Diff (Nautical_Twilight)")
 ```
 
+- Below is a visual representation of twilight for context.</br></br>
+<img src="Twilight-1.png" width="1000" height="325"></br>
 
 <img src="Time_Difference.png" width="1000" height="275"></br>
+- From the information provided we can determine that overall, collisions take longer to clear at night; with Los Angles taking the longest followed by Boston, New york and finally Chicago. It can also be determined that overall during civil twilight the most collisions occur.
 
-**3. Looking at the amount of accident resolution per month, and temperature grouped by city.**
+**2. Collisions per month, temperature and grouped by city.**
 ```Python
 #Weather graph
 fig2, axs = plt.subplots(ncols=3,figsize=(15,4))
@@ -71,17 +60,25 @@ sns.lineplot(x='Start_month', y='Temperature(F)', data=df, ax=axs[0],hue='City',
 sns.lineplot(x='Start_month', y='Humidity(%)', data=df, ax=axs[1],hue='City',ci=None).set_title("Graph (Humidity(%))")
 sns.lineplot(x='Start_month', y='Pressure(in)', data=df, ax=axs[2],hue='City',ci=None).set_title("Graph (Pressure(in))")
 ```
+- From the information provided we can determine that:</br>
+  - From the end of May to the end of August is when the most collsions occur. This fact likely due to the season and more people on the road.
+  - Upon observing collisions during periods of high humidity we can determine that Chicago peaked during the month of September and was at its lowest in New York in the month of March.
+  - Upon observing collisions during periods of high and low air pressure, we can see that during the month of May in Chicago there was the least amount of collisions. Which makes since due to warm weather being favorable to tire pressure. During the month of October we can see the highest activity.
+
+
+
 
 
 <img src="weather_info.png" width="1000" height="275"></br>
-**4. Looking at the time difference of accident resolution per temperature and grouped by city.**
+**3. Looking at the time difference of accident resolution per temperature and grouped by city.**
 ```Python
 fig2, axs = plt.subplots(ncols=3,figsize=(15,4))
 sns.lineplot(x='Difference', y='Temperature(F)', data=df, ax=axs[0],hue='City',ci=None).set_title("Time_Diff (Temperature(F))")
 sns.lineplot(x='Difference', y='Humidity(%)', data=df, ax=axs[1],hue='City',ci=None).set_title("Time_Diff (Humidity(%))")
 sns.lineplot(x='Difference', y='Pressure(in)', data=df, ax=axs[2],hue='City',ci=None).set_title("Time_DIff (Pressure(in))")
 ```
-
+- What can be determined from this final graph?
+   - From this final graph which can appear to be more cluttered, we can determine that New York at its hottest takes the longest to clear a traffic accident. New York and Boston both peak with regards to clearing an accident when the environment is the most humid.
 
 <img src="Time_Difference (by climate).png" width="1000" height="275">
 
