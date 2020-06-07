@@ -47,14 +47,14 @@ sns.barplot(x='City',y='Difference', data=df,ax=ax[2],hue='Nautical_Twilight').s
 ```
 
 - Below is a visual representation of twilight for context.</br></br>
-<img src="Twilight-1.png" width="1000" height="275"></br>
+<img src="Twilight-1.png" width="1000" height="375"></br>
 
 <img src="Time_Difference.png" width="1000" height="275"></br>
 - From the information provided we can determine that overall, collisions take longer to clear at night; with Los Angles taking the longest followed by Boston, New york and finally Chicago. It can also be determined that overall during civil twilight the most collisions occur.
 
 **2. Collisions per month, temperature and grouped by city.**
-- From thei nformation provided we can determine that:</br>
- - lornipsum
+- From the information provided we can determine that:</br>
+  - From the data provided we can determine that from the end of May to the end of August is when the most collsions occur. This fact likely due to the season and more people on the road.
 
 
 ```Python
