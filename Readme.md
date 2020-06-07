@@ -77,7 +77,9 @@ sns.lineplot(x='Difference', y='Temperature(F)', data=df, ax=axs[0],hue='City',c
 sns.lineplot(x='Difference', y='Humidity(%)', data=df, ax=axs[1],hue='City',ci=None).set_title("Time_Diff (Humidity(%))")
 sns.lineplot(x='Difference', y='Pressure(in)', data=df, ax=axs[2],hue='City',ci=None).set_title("Time_DIff (Pressure(in))")
 ```
-
+</br>
+- What can be determined from this final graph?</br>
+   - From this final graph which can appear to be more cluttered, we can determine that  
 
 <img src="Time_Difference (by climate).png" width="1000" height="275">
 
