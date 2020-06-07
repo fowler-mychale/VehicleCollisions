@@ -78,7 +78,7 @@ sns.lineplot(x='Difference', y='Humidity(%)', data=df, ax=axs[1],hue='City',ci=N
 sns.lineplot(x='Difference', y='Pressure(in)', data=df, ax=axs[2],hue='City',ci=None).set_title("Time_DIff (Pressure(in))")
 ```
 - What can be determined from this final graph?
-   - From this final graph which can appear to be more cluttered, we can determine that  
+   - From this final graph which can appear to be more cluttered, we can determine that New York at its hottest takes the longest to clear a traffic accident. New York and Boston both peak with regards to clearing an accident when the environment is the most humid.
 
 <img src="Time_Difference (by climate).png" width="1000" height="275">
 
