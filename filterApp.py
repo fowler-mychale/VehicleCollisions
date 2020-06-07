@@ -43,8 +43,8 @@ df.drop(['Start_Time','End_Time','Start_Date','End_Date'], axis=1,inplace=True)
 # City Graph 
 fig1, ax = plt.subplots(ncols=3,figsize=(15,4))
 sns.barplot(x='City',y='Severity', data=df,ax=ax[0],hue='Astronomical_Twilight').set_title("Graph (Astronomical_Twilight) ")
-sns.barplot(x='City',y='Severity', data=df, ax=ax[1],hue='Civil_Twilight').set_title("Graph (Civil_Twilight)")
-sns.barplot(x='City',y='Severity', data=df,ax=ax[2],hue='Nautical_Twilight').set_title("Graph (Nautical_Twilight)")
+sns.barplot(x='City',y='Severity', data=df, ax=ax[1],hue='Nautical_Twilight').set_title("Graph (Nautical_Twilight)")
+sns.barplot(x='City',y='Severity', data=df,ax=ax[2],hue='Civil_Twilight').set_title("Graph (Civil_Twilight)")
 
 #Weather graph
 fig2, axs = plt.subplots(ncols=3,figsize=(15,4))
