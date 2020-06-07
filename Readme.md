@@ -16,6 +16,9 @@
   - **Civil_Twilight:**  Civil twilight is defined as the time when the Sun is just below the horizon, so there is generally enough natural light to carry out most outdoor activities.
   - **Nautical_Twilight:** Defined as the time when the horizon and the brighter stars are usually visible at this time, making it possible to navigate at sea.
   - **Astronimical_Twilight:** Defined as the time when the geometric center of the Sun is at 18 degrees below the horizon. Before this time, the sky is absolutely dark.</br></br>
+  
+  Lets isolate the Difference and group the data by Severity using pandas 'groupby'. We can use 'describe' on the re-shaped data.
+  
 ``` Python
 print((df[['Difference', 'Severity']].groupby(['Severity']).describe()))
 ```
@@ -27,6 +30,8 @@ print((df[['Difference', 'Severity']].groupby(['Severity']).describe()))
 | 2             |  52917.0      | 26.071338   |   17.720273   |   0.0   |  6.0      |29.0                |     44.0 |     59.0   |
 | 3             |36346.0        | 29.519617   | 15.690686     |   0.0   | 29.0      |29.0                |    44.0  |     59.0   |
 | 4             | 1421.0        | 14.648839   |  16.899533    |   0.0   | 0.0       |0.0                 |    29.0  |     59.0   | 
+
+- From here we can determine that from the raw count there are more level 2 and 3 cases with level 1 having the least.
 
  - **What other insights can we gather from the selected tables?**</br></br>
    - We can extrapolate the time difference from subtracting the Start_Time and End_Time columns and determine who had the longest time to clear a collision.</br></br>
