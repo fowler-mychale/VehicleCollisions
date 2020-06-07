@@ -16,15 +16,18 @@
   - **Civil_Twilight:**  Civil twilight is defined as the time when the Sun is just below the horizon, so there is generally enough natural light to carry out most outdoor activities.
   - **Nautical_Twilight:** Defined as the time when the horizon and the brighter stars are usually visible at this time, making it possible to navigate at sea.
   - **Astronimical_Twilight:** Defined as the time when the geometric center of the Sun is at 18 degrees below the horizon. Before this time, the sky is absolutely dark.</br></br>
-
+``` Python
+print((df[['Difference', 'Severity']].groupby(['Severity']).describe()))
+```
+</br>
 
 | Severity      | count         |mean         | std           | min     | 25%       | 50%                | 75%      | max        |
 |---------------| :-------------|-------------|---------------|---------|-----------|--------------------|----------|------------|
 | 1             | 19.0          | 28.052632   |    18.596516  |   0.0   |14.0       |  29.0              |   45.0   |     48.0   |
 | 2             |  52917.0      | 26.071338   |   17.720273   |   0.0   |  6.0      |29.0                |     44.0 |     59.0   |
 | 3             |36346.0        | 29.519617   | 15.690686     |   0.0   | 29.0      |29.0                |    44.0  |     59.0   |
-| 4             |  14.648839    | 11/10/2010  |  16.899533    |   0.0   | 0.0       |0.0                 |    29.0  |     59.0   | 
-  
+| 4             | 1421.0        | 14.648839   |  16.899533    |   0.0   | 0.0       |0.0                 |    29.0  |     59.0   | 
+</br></br>  
  - **What other insights can we gather from the selected tables?**</br></br>
    - We can extrapolate the time difference from subtracting the Start_Time and End_Time columns and determine who had the longest time to clear a collision.</br></br>
   ``` Python
