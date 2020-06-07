@@ -41,15 +41,6 @@
 **1. Looking at the severity of accidents per city and twilight (Night/Day).**</br>
 - Below is a visual representation of twilight for context.</br></br>
 <img src="Twilight-1.png" width="1000" height="275"></br>
-- 
-```Python
-fig1, ax = plt.subplots(ncols=3,figsize=(15,4))
-sns.barplot(x='City',y='Severity', data=df,ax=ax[0],hue='Astronomical_Twilight').set_title("Graph (Astronomical_Twilight)")
-sns.barplot(x='City',y='Severity', data=df, ax=ax[1],hue='Civil_Twilight').set_title("Graph (Civil_Twilight)")
-sns.barplot(x='City',y='Severity', data=df,ax=ax[2],hue='Nautical_Twilight').set_title("Graph (Nautical_Twilight)")
-```
-<img src="City_info.png" width="1000" height="275"></br>
-
 
 
 **2. Looking at the time difference of accidents per city and twilight (Night/Day).**
