@@ -98,7 +98,7 @@ sns.lineplot(x='Difference', y='Pressure(in)', data=df, ax=axs[2],hue='City',ci=
    - From this final graph which can appear to be more cluttered, we can determine that New York at its hottest takes the longest to clear a traffic accident. New York and Boston both peak with regards to clearing an accident when the environment is the most humid.
 
 <img src="Time_Difference (by climate).png" width="1000" height="275">
-</br></br>
+</br>
 
 ### Tools used for this project
 - Python 3.8.2
